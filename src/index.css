@@ -3,3 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root{
+  --background: #231F42;
+  --heading: #F56B9A;
+  --btn-background: #37AEAB;
+  --white-text: #FFFFFF;
+  --blue-text: #37AEAB;
+  --grey-text: #D0D0D0;
+  --black-text: #000000;
+  --border-pink: #F56B9A;
+}
