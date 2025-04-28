@@ -1,7 +1,34 @@
+import { useEffect } from "react";
+import useEventsStore from "../../stores/useEventsStore";
+import SearchBar from '../../components/SearchBar/SearchBar';
+import EventCard from '../../components/EventCard/EventCard';
 
 function EventsPage() {
+  const { events } = useEventsStore();
+
+  useEffect(() => {
+      events.map((event) => console.log(event))
+  },[events])
+
+ 
+
   return (
-    <div>EventsPage</div>
+    <section className="page">
+      <h1>Events</h1>
+      <SearchBar />
+      {
+        events && events.length > 0 ? (
+          <section className="events">
+            {
+              events.map(event => 
+                <EventCard key={event.id} event={event} />
+              )
+            }
+          </section>
+        ) : (
+          <p className="no-events">No available events</p>
+        )}
+    </section>
   )
 }
 
