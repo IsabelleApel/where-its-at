@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './eventCard.css';
 
 function EventCard({event}) {
@@ -15,20 +16,24 @@ function EventCard({event}) {
   
   return (
     <article className="event-card">
-      <div className="left">
-        <p className="date">
-          <span className="day">{day}</span>
-          <span className="month">{month}</span>
-        </p>
-      </div>
-      <div className="middle">
-        <h2 className='event-name'>{event.name}</h2>
-        <p className='event-place'>{event.where}</p>
-        <p className='event-time'>{`${event.when.from} - ${event.when.to}`}</p>
-      </div>
-      <div className="right">
-        <p>{`${event.price} sek`}</p>
-      </div>
+      <Link 
+        to={`/events/${event.id}`}
+        className='event-card__link'>
+        <div className="left">
+          <p className="date">
+            <span className="day">{day}</span>
+            <span className="month">{month}</span>
+          </p>
+        </div>
+        <div className="middle">
+          <h2 className='event-name'>{event.name}</h2>
+          <p className='event-place'>{event.where}</p>
+          <p className='event-time'>{`${event.when.from} - ${event.when.to}`}</p>
+        </div>
+        <div className="right">
+          <p>{`${event.price} sek`}</p>
+        </div>
+      </Link>
     </article>
   )
 }

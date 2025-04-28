@@ -6,6 +6,13 @@
 }
 
 .event-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card__link{
+    text-decoration: none;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
@@ -16,6 +23,7 @@
     width: 4rem;
     aspect-ratio: 1;
     border: 1px solid var(--white-text);
+    color: var(--white-text);
     border-radius: 3px;
     display: flex;
     flex-direction: column;
@@ -37,7 +45,7 @@
 
 .middle,
 .right{
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);;
     padding-bottom: .5rem;
 }
 
@@ -50,11 +58,13 @@
         font-size: 22px;
         font-weight: 600;
         text-shadow: 1px 1px var(--heading);
+        color: var(--white-text);
     }
     
     .event-place{
         font-size: 12px;
         font-style: italic;
+        color: var(--white-text);
         opacity: 0.8;
     }
     
