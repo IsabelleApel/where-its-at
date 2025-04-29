@@ -1,0 +1,9 @@
+.list-item{
+    list-style: none;
+}
+
+.nav-link{
+    color: var(--white-text);
+    text-decoration: none;
+    font-size: 19px;
+}
