@@ -1,10 +1,10 @@
 import './navItem.css';
 import { NavLink } from 'react-router-dom';
 
-function NavItem({to, label}) {
+function NavItem({to, label, className}) {
   return (
     <li className='list-item'>
-        <NavLink to={to} className={({ isActive }) => isActive ? 'active nav-link' : 'nav-link'}>{label}</NavLink>
+        <NavLink to={to} className={className}>{label}</NavLink>
     </li>
   )
 }

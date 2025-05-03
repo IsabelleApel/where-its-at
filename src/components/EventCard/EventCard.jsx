@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import './eventCard.css';
-import useCountStore from '../../stores/useCountStore';
 
 function EventCard({event}) {
-  const { reset } = useCountStore();
 
   const handleDate = ((date) => {
     const divide = date.split(" ");
@@ -21,7 +19,6 @@ function EventCard({event}) {
       <Link 
         to={`/events/${event.id}`}
         className='event-card__link'
-        onClick={reset}
         >
         <div className="left">
           <p className="date">

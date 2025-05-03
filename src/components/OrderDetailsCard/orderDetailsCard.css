@@ -1,0 +1,22 @@
+.order-card{
+    width: 80%;
+    border: 2px solid var(--border-pink);
+}
+
+.order-card__title{
+    font-family: 'Sansita One', cursive;
+    font-size: 24px;
+    color: var(--heading);
+}
+
+.order-card__when{
+    font-size: 14px;
+    color: var(--blue-text);
+}
+
+.order-card__amount-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}

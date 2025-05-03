@@ -7,3 +7,9 @@
     text-decoration: none;
     font-size: 19px;
 }
+
+.cart-icon{
+    background-color: var(--border-pink);
+    padding: 2.5rem;
+    border-radius: 50%;
+}
