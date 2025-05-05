@@ -19,7 +19,7 @@ function OrderPage() {
         {cart.length > 0 ? (
           <section className="order-details"> {cart.map(event => <OrderDetailsCard key={event.id} event={event} />)}</section>
           ) : (
-          <p className="no-events">No orders yet</p>
+          <p className="no-orders">No orders yet</p>
         )}
         {cart.length > 0 ? (
           <section className="order-sum">
@@ -27,7 +27,7 @@ function OrderPage() {
             <p className='order-sum__price'>{`${total} sek`}</p>
           </section>
           ) : (
-          <p className="order__sum"></p>
+          <p className="order-sum"></p>
         )}
       
       <Button to={'/tickets'} text={'Skicka order'} disabled={cart.length === 0}/>

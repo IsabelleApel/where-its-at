@@ -1,0 +1,61 @@
+.ticket{
+    background-color: var(--white-text);
+    color: var(--black-text);
+    width: 80%;
+    border-radius: 3px;
+
+    .what{
+
+        h1{
+            margin-top: 0;
+            padding: 1rem;
+            font-size: 26px;
+        }
+    }
+    .where{
+        background-color: rgba(0, 0, 0, 0.03);
+
+        .where__info{
+            font-size: 18px;
+            font-weight: 600;
+            padding: 1rem;
+        }
+    }
+    .when{
+        background-color: rgba(0, 0, 0, 0.06);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-top: 1px dotted black;
+        border-bottom: 1px dotted black;
+
+        .when__info{
+            padding: 0 .5rem .5rem;
+            font-weight: 500;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .from-wrapper{
+            border-left: 1px dotted black;
+            border-right: 1px dotted black;
+        }
+    }
+    .info{
+        background-color: rgba(0, 0, 0, 0.09);
+
+    }
+    .barcode{
+        display: grid;
+        place-content: center;
+        background-color: rgba(0, 0, 0, 0.12);
+
+    }
+}
+
+.ticket__section-info{
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.4);
+    padding: .5rem;
+}

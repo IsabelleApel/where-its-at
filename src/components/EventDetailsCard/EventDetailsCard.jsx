@@ -3,6 +3,7 @@ import useEventsStore from "../../stores/useEventsStore";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from "../Button/button";
+import './eventDetailsCard.css';
 
 function EventDetailsCard() {
 
@@ -17,12 +18,12 @@ function EventDetailsCard() {
         <p className="event-info__when">{`${event.when.date} kl ${event.when.from} - ${event.when.to}`}</p>
         <p className="event-info__where">{`@ ${event.where}`}</p>
       </section>
-      <section className="tickets">
-        <p className="tickets__total-price">{event.quantity === 0 ? `${event.price} sek` :`${event.price * (event.quantity)} sek`}</p>
-        <div className="tickets__adjust-price">
-          <FontAwesomeIcon icon={faMinus} onClick={() => removeFromCart(event.id)} className="tickets__icon fa-lg"/>
-          <p className="tickets__amount">{event.quantity}</p>
-          <FontAwesomeIcon icon={faPlus} onClick={() => addToCart(event.id)} className="tickets__icon fa-lg"/>
+      <section className="event-tickets">
+        <p className="event-tickets__total-price">{event.quantity === 0 ? `${event.price} sek` :`${event.price * (event.quantity)} sek`}</p>
+        <div className="event-tickets__adjust-price">
+          <FontAwesomeIcon icon={faMinus} onClick={() => removeFromCart(event.id)} className="event-tickets__icon fa-lg"/>
+          <p className="event-tickets__amount">{event.quantity}</p>
+          <FontAwesomeIcon icon={faPlus} onClick={() => addToCart(event.id)} className="event-tickets__icon fa-lg"/>
         </div>
       </section>
       <Button to={'/order'} text={'Lägg i varukorg'} disabled={event.quantity === 0}/>

@@ -7,16 +7,36 @@
     font-family: 'Sansita One', cursive;
     font-size: 24px;
     color: var(--heading);
+    margin-top: .5rem;
+    padding-left: .5rem;
 }
 
 .order-card__when{
     font-size: 14px;
     color: var(--blue-text);
+    padding-left: .5rem;
 }
 
 .order-card__amount-wrapper{
-    display: flex;
-    justify-content: space-between;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    border-top: 1px solid var(--border-pink);
+    margin-top: .5rem;
+
+    .order-card__icon{
+        align-self: center;
+        justify-self: center;
+        padding: .3rem;
+    }
+
+    .order-card__amount{
+        font-size: 28px;
+        display: grid;
+        place-content: center;
+        padding: .3rem;
+        border-left: 1px solid var(--border-pink);
+        border-right: 1px solid var(--border-pink);
+    }
 
 }
