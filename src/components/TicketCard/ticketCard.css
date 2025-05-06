@@ -40,9 +40,14 @@
             border-right: 1px dotted black;
         }
     }
-    .info{
+    .seats{
         background-color: rgba(0, 0, 0, 0.09);
 
+        .seats__info{
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.6);
+            padding: .5rem;
+        }
     }
     .barcode{
         display: grid;

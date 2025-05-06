@@ -3,7 +3,6 @@ import Barcode from 'react-barcode';
 
 function TicketCard({event}) {
 
-
   return (
     <section className="ticket">
       <section className="what">
@@ -28,12 +27,12 @@ function TicketCard({event}) {
           <p className='when__info'>{event.when.to}</p>
         </div>
       </section>
-      <section className="info">
+      <section className="seats">
         <p className='ticket__section-info'>info</p>
-        <p>function to randomise section + seat</p>
+        <p className='seats__info'>{`Section ${event.seat.section} - seat ${event.seat.number}`}</p>
       </section>
       <section className="barcode">
-        <Barcode value="XX345" background='transparent'/>
+        <Barcode value={event.orderNumber} background='transparent'/>
       </section>
     </section>
   )
