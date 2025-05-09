@@ -3,6 +3,19 @@
     color: var(--black-text);
     width: 80%;
     border-radius: 3px;
+    grid-row: 1;
+    grid-column: 1;
+    transition: 0.3s ease;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    
+    &:hover{
+        cursor: grab;
+    }
+
+    &:active{
+        cursor: grabbing;
+    }
 
     .what{
 
@@ -13,7 +26,7 @@
         }
     }
     .where{
-        background-color: rgba(0, 0, 0, 0.03);
+        background-color: #f7f7f7;
 
         .where__info{
             font-size: 18px;
@@ -22,7 +35,7 @@
         }
     }
     .when{
-        background-color: rgba(0, 0, 0, 0.06);
+        background-color: #f0f0f0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         border-top: 1px dotted black;
@@ -41,7 +54,7 @@
         }
     }
     .seats{
-        background-color: rgba(0, 0, 0, 0.09);
+        background-color: #e8e8e8;
 
         .seats__info{
             font-size: 12px;
@@ -52,7 +65,7 @@
     .barcode{
         display: grid;
         place-content: center;
-        background-color: rgba(0, 0, 0, 0.12);
+        background-color: #e0e0e0;
 
     }
 }
@@ -64,3 +77,4 @@
     color: rgba(0, 0, 0, 0.4);
     padding: .5rem;
 }
+

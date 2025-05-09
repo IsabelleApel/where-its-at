@@ -1,12 +1,10 @@
 import useEventsStore from '../../stores/useEventsStore';
 import TicketCard from '../../components/TicketCard/TicketCard';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import './ticketsPage.css';
 
 function TicketsPage() {
   const {events} = useEventsStore();
-  const cart = events.filter(event => event.quantity > 0)
 
   const generateOrderNum = () => {
     let result = '';
@@ -29,29 +27,43 @@ function TicketsPage() {
     return Array.from({ length : quantity}, (_,i) => start + i);
   }
 
-  const tickets = cart.flatMap(event => {
-    const orderNumber = generateOrderNum();
-    const section = generateSection();
-    const seatNumbers = generateSeats(event.quantity);
+  const generatedTickets = useMemo(() => {
+    return events
+      .filter(event => event.quantity > 0)
+      .flatMap(event => {
+        const orderNumber = generateOrderNum();
+        const section = generateSection();
+        const seatNumbers = generateSeats(event.quantity);
 
-    return seatNumbers.map(seatNum => ({
-      ...event, 
-      orderNumber,
-      seat: {
-        section,
-        number: seatNum
-      }
-    }))
-  });
+        return seatNumbers.map(seatNum => ({
+          ...event, 
+          id: `${event.id}-${seatNum}`,
+          orderNumber,
+          seat: {
+            section,
+            number: seatNum
+          }
+        }));
+      })
+  }, [events]);
+
+  const [tickets, setTickets] = useState([...generatedTickets])
+  const [originalTickets] = useState([...generatedTickets])
+
+
 
   return (
     <section className="page">
-      {cart.length > 0 ? (
+      {tickets.length > 0 ? (
           <section className="tickets"> 
-            {tickets.map((ticket, i) => (
+            {tickets.slice().reverse().map((ticket, index) => (
               <TicketCard 
-                key={`${ticket.id}-${i}`} 
+                key={ticket.id} 
                 event={ticket} 
+                index={index}
+                tickets={tickets}
+                setTickets={setTickets}
+                originalTickets={originalTickets}
               />
             )
           )}
