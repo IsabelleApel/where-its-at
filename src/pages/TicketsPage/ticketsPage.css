@@ -1,0 +1,19 @@
+.tickets-page{
+    background-image: linear-gradient(#F56B9A, #231F42);
+}
+
+.tickets{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.no-tickets{
+    margin-top: 5rem;
+    width: 50%;
+    text-align: center;
+    font-size: 19px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+}

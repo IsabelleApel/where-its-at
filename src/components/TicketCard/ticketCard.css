@@ -1,0 +1,80 @@
+.ticket{
+    background-color: var(--white-text);
+    color: var(--black-text);
+    width: 80%;
+    border-radius: 3px;
+    grid-row: 1;
+    grid-column: 1;
+    transition: 0.3s ease;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    
+    &:hover{
+        cursor: grab;
+    }
+
+    &:active{
+        cursor: grabbing;
+    }
+
+    .what{
+
+        h1{
+            margin-top: 0;
+            padding: 1rem;
+            font-size: 26px;
+        }
+    }
+    .where{
+        background-color: #f7f7f7;
+
+        .where__info{
+            font-size: 18px;
+            font-weight: 600;
+            padding: 1rem;
+        }
+    }
+    .when{
+        background-color: #f0f0f0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-top: 1px dotted black;
+        border-bottom: 1px dotted black;
+
+        .when__info{
+            padding: 0 .5rem .5rem;
+            font-weight: 500;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .from-wrapper{
+            border-left: 1px dotted black;
+            border-right: 1px dotted black;
+        }
+    }
+    .seats{
+        background-color: #e8e8e8;
+
+        .seats__info{
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.6);
+            padding: .5rem;
+        }
+    }
+    .barcode{
+        display: grid;
+        place-content: center;
+        background-color: #e0e0e0;
+
+    }
+}
+
+.ticket__section-info{
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.4);
+    padding: .5rem;
+}
+

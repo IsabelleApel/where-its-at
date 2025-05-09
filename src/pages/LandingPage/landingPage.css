@@ -1,0 +1,9 @@
+.page--center{
+    margin-top: 8rem;
+}
+
+.landing-page__text{
+    font-size: 22px;
+    font-style: italic;
+    text-shadow: 1px 1px #000000;
+}

@@ -1,0 +1,19 @@
+button{
+    width: 80%;
+    padding: 1rem;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--btn-background);
+    font-family: 'Fira Sans';
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--white-text);
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 6rem;
+  }
+
+  .button-disabled{
+    opacity: 50%;
+    cursor: not-allowed;
+  }
