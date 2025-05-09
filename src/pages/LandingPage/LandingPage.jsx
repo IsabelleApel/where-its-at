@@ -10,7 +10,6 @@ function LandingPage() {
       <img src={logo} alt="logo-img" className='logo-img' />
       <h1>Where it's @</h1>
       <p className='landing-page__text'>Ticketing made easy</p>
-      <button onClick={() => navigate('/events')}>Events</button>
       <NavBar />
     </section>
   )

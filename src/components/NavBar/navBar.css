@@ -12,3 +12,17 @@ nav{
     justify-content: space-around;
     width: 100%;
 }
+
+.relative{
+    position: relative;
+}
+
+.dot-indicator {
+    position: absolute;
+    top: -.6rem;
+    right: -.6rem;
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: var(--background);
+    border-radius: 50%;
+  }

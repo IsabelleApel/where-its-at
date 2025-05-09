@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import useEventsStore from "../../stores/useEventsStore";
 import SearchBar from '../../components/SearchBar/SearchBar';
 import EventCard from '../../components/EventCard/EventCard';
@@ -7,11 +6,6 @@ import NavBar from "../../components/NavBar/NavBar";
 function EventsPage() {
   const { events, filteredEvents, filterEvents } = useEventsStore();
 
-
-  useEffect(() => {
-      events.map((event) => console.log(event))
-  },[events])
-
   const handleChange = (value) => {
     if(value.length >= 3){
       filterEvents(value);
@@ -19,8 +13,6 @@ function EventsPage() {
       filterEvents('');
     }
   }
-
- 
 
   return (
     <section className="page">
