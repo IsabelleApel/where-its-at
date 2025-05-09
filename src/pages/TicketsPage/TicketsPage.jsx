@@ -53,7 +53,7 @@ function TicketsPage() {
 
 
   return (
-    <section className="page">
+    <section className="page tickets-page">
       {tickets.length > 0 ? (
           <section className="tickets"> 
             {tickets.slice().reverse().map((ticket, index) => (
