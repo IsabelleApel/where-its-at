@@ -9,8 +9,6 @@ Du bygger alltså inte bara ett gränssnitt – du bygger pulsen i stadens musik
 
 Ditt uppdrag är att koda ihop en frontend till biljettjänsten _Where its @_. Den ska se ut enligt nedan mockup. Du har också tillgång till [Figma-länk](https://www.figma.com/file/vcgWPPy2q44oZZ2eORL1wB/Where-its-light?node-id=0%3A1) för exportering av assets, färger, kika fonter etc.
 
-![screen](./screen.png)
-
 ## Tekniska krav för godkänt
 
 Du skall i denna uppgift för att få godkänt visa att du behärskar följande tekniker och delar inom React:
