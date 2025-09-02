@@ -7,7 +7,7 @@ Du bygger alltså inte bara ett gränssnitt – du bygger pulsen i stadens musik
 
 ## Uppdrag
 
-Ditt uppdrag är att koda ihop en frontend till biljettjänsten _Where its @_. Den ska se ut enligt nedan mockup. Du har också tillgång till [Figma-länk](https://www.figma.com/file/vcgWPPy2q44oZZ2eORL1wB/Where-its-light?node-id=0%3A1) för exportering av assets, färger, kika fonter etc.
+Ditt uppdrag är att koda ihop en frontend till biljettjänsten _Where its @_. Du har tillgång till [Figma-länk](https://www.figma.com/file/vcgWPPy2q44oZZ2eORL1wB/Where-its-light?node-id=0%3A1) för exportering av assets, färger, kika fonter etc.
 
 ## Tekniska krav för godkänt
 
